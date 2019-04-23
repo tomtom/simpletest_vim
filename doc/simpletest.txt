@@ -1,0 +1,53 @@
+*simpletest.txt*    Simple unit tests using VIM's own assert_* functions
+                    Author: Tom Link, micathom at gmail com
+
+The |:Simpletest| command first loads test files matching test/NAME.vim or 
+test/NAME/*.vim and it then runs all test function matching 
+`NAME#(...#)*Test_.*`. These test functions are supposed to be embedded in the 
+autoload vimscript files. They should use VIM's own assert*-functions like 
+|assert_equal()| -- see also |v:errors|.
+
+
+-----------------------------------------------------------------------
+Install~
+
+Either use the zip archive:
+
+- Download the zip archive
+- Extract it to `~/.vim/pack/tml/start/simpletest_vim`
+
+or install from github:
+
+- Start a terminal
+- Change the working directory to `~/.vim/pack/tml/start/`
+- Type: `git clone https://github.com/tomtom/simpletest_vim`
+
+or use a VIM plugin manager like vim-plug, vundle, dein.vim, VAM etc.
+
+NOTE: On Windows, ~/.vim might be ~/vimfiles. Please see 'runtimepath' 
+for details.
+
+Also available via git: http://github.com/tomtom/simpletest_vim
+
+
+========================================================================
+Contents~
+
+        :Simpletest ............... |:Simpletest|
+
+
+------------------------------------------------------------------------
+                                                    *plugin/simpletest.vim*
+                                                    *:Simpletest*
+:Simpletest [NAME]
+    Run test functions whose name matches /NAME#(...#)*Test_.*/ and 
+    display a list of errors.
+
+    If no name is give, run all test function.
+
+    Test functions should use VIM's |assert_equal()| and similar functions 
+    and report to v:errors.
+
+
+
+vim:tw=78:fo=w2croql:isk=!-~,^*,^|,^":ts=8:ft=help:norl:

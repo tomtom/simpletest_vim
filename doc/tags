@@ -1,0 +1,3 @@
+:Simpletest	simpletest.txt	/*:Simpletest*
+plugin/simpletest.vim	simpletest.txt	/*plugin\/simpletest.vim*
+simpletest.txt	simpletest.txt	/*simpletest.txt*
